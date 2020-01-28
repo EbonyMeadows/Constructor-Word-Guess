@@ -3,7 +3,6 @@ var chalk = require("chalk");
 var Word = require("./Word");
 var words = require("./words");
 
-// The Game constructor is responsible for keeping score and controlling the flow of the overall game
 
 function Game() {
   // Save a reference for `this` in `self` as `this` will change inside of inquirer
@@ -40,7 +39,7 @@ function Game() {
         self.guessesLeft = 10;
         self.nextWord();
 
-        // Otherwise prompt the user to guess the next letter
+        
       }
       else {
         self.makeGuess();
@@ -48,7 +47,7 @@ function Game() {
     });
   };
 
-  // Asks the user if they want to play again after running out of guessesLeft
+  // Asks the user if they want to play again 
   this.askToPlayAgain = function() {
     inquirer
       .prompt([
